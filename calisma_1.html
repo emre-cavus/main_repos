@@ -1,0 +1,78 @@
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>     Çalışıyorum.exe  </title>
+</head>
+<body>
+    <h1>İnput kullanımı</h1>
+    Ad: &nbsp &nbsp&nbsp <input type="text" name="isim"> <br>
+    Soyad: <input type="password" name="şifre"> <br>
+    <h1>İnput Checkbox kullanımı</h1>
+    <input type="checkbox" name="kutu1" id="1" checked="on"> <br>
+    <input type="checkbox" name="kutu2" id="2"> <br>
+    <h1>İnput Radio kullanımı</h1>
+    <input type="radio" name="secim"> Evet <br>
+    <input type="radio" name="secim"> Hayır <br>
+    <h1>Form kullanımı</h1>
+    <form action="calisma_1.html" method="post" >
+            <fieldset>
+                <legend>Üyelik Bilgileri</legend>
+        <label>Ad Soyad:</label>
+        <input type="text" name="ad" autofocus="autofocus" value="Ad soyad giriniz."> <br>
+        <label>E-posta:</label> &nbsp &nbsp
+        <input type="text" name="eposta" value="Eposta giriniz."> <br>
+        <label>Şifre:</label> &nbsp &nbsp &nbsp &nbsp
+        <input type="text" value="Şifre giriniz"> <br>
+        <input type="radio" name="cinsiyet" value="Erkek" checked="on"> Erkek <br>
+        <input type="radio" name="cinsiyet" value="Kadın"> Kadın <br>
+        <hr>
+        <select name="iller" id="il_secim" size="1">
+            <optgroup label="Ankara">
+                <option value="s1">Seçenek 1</option>
+                <option value="s2">Seçenek 2</option>
+                <option value="s3">Seçenek 3</option>
+            </optgroup>
+            <optgroup label="Çanakkale">
+                <option value="s1">İnline</option>
+                <option value="s2">Relative</option>
+                <option value="s3">Z-İndex</option>
+            </optgroup>
+            <optgroup label="Eskişehir">
+                <option value="s1">0-255 rgb</option>
+                <option value="s2">00</option>
+                <option value="s3">error</option>
+            </optgroup> <br>
+        </select> <br>
+        
+        <br><textarea rows="3" cols="20" tabindex="2">Yorumlarınız..</textarea> <br/><br/> 
+
+        <p><strong>Aldıkları puanlar:</strong></p>
+        <p><label for="bulent">Bülent:</label>
+        <meter id="bulent" min="0" low="40" high="90" max="100" value="55"></meter>50</p>
+        <p><label for="umit">Ümit:</label>
+        <meter id="umit" min="0" low="40" high="90" max="100" value="100"></meter>100</p>
+        <p><label for="fatih">Fatih:</label>
+        <meter id="fatih"min="0" low="40" high="90" max="100" value="70"></meter>70</p>
+        <p><label for="selcuk">Selçuk:</label>
+        <meter id="selcuk" min="0" low="40" high="90" max="100" value="90"></meter>90</p>
+            <!------------------------------------------------------------>
+            <p><strong>Anketi tamamlama durumu:</strong></p>
+            <p><progress id="harun" max="100" value="40"></progress>
+            <label for="harun">Harun </label></p>
+            <p><progress id="ilhan" max="100" value="20"></progress>
+            <label for="ilhan">İlhan</label></p>
+            <p><progress id="enes" max="100" value="80"></progress>
+            <label for="enes">Enes</label></p>
+            <p><progress id="isa" max="100" value="60"></progress>
+            <label for="isa">İsa</label></p>
+            <p></p><progress id="kadir" max="100" value="50"></progress>
+            <label for="kadir">Kadir</label></p>
+    <!----------------------------->
+        <input type="submit" value="Gönder"><input type="reset" value="Temizle"> <br>
+        <input type="hidden" name="ipAdresi" value="212.175.132.130">
+        </fieldset>
+    </form>
+</body>
+</html>
