@@ -1,0 +1,113 @@
+<!--  Açılan kart ekranı yapma. (bitti)  -->
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title> Açılan kart yapcuk </title>
+
+    <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Inter:wght@700&display=swap');
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        .container{
+            display: flex;
+            width: 90vw;
+        }
+
+        .panel{
+            background-size: auto 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 80vh;
+            border-radius: 50px;
+            cursor: pointer;
+            flex: 0.5;
+            margin: 10px;
+            position: relative;
+            transition: flex 0.7s ease-in;
+        }
+        .panel h3{
+            color: gray;
+            font-size: 24px;
+            position:absolute;
+            bottom:20px;
+            left: 50%;
+            margin: 0px;
+            opacity: 0;
+        }
+        .panel.active{
+            flex:5;
+        }
+        .panel.active h3{
+            text-decoration: underline;
+            opacity: 1;
+            transition:opacity 0.3s ease-in 0.4s;
+        }
+    @media (max-width: 600px){
+        .container{
+            width: 100vw;
+        }
+
+    .panel:nth-of-type(4),.panel:nth-last-of-type(s){
+        display: none;
+        }
+    }
+    </style>
+</head>
+<body bgcolor="black">
+    <!-- <h3 align="center"><font color="white">  Proje #1 | Açılan kartlar  </font></h3> -->
+    <br>
+    <div class="container">
+        <div class="panel active " style="background-image: url('https://i4.hurimg.com/i/hurriyet/75/750x422/6106a4767af5071d68b3a2b2.jpg');">
+            <h3>  Humus  </h3>
+        </div>
+        <div class="panel active" style="background-image: url('https://gaziantepetyemekleri.com/wp-content/uploads/2020/05/babagannus-1024x576.jpg');">
+            <h3>  Babagannus  </h3>
+        </div>
+        <div class="panel active" style="background-image: url('https://www.unileverfoodsolutions.com.tr/dam/global-ufs/mcos/TURKEY/calcmenu/recipes/TR-recipes/general/havuç-tarator/main-header.jpg');">
+            <h3>  Tarator  </h3>
+        </div>
+        <div class="panel active" style="background-image: url('https://cdn.yemek.com/mnresize/940/940/uploads/2014/11/muhammara-one-cikan.jpg');">
+            <h3>  Muhammara  </h3>
+        </div>
+        <div class="panel active" style="background-image: url('https://www.gurmecenter.com/wp-content/uploads/2021/09/tarama-nasil-yapilir.jpg');">
+            <h3>  Tarama  </h3>
+        </div>
+    </div>
+    
+    <script>
+        const panels = document.querySelectorAll(".panel");
+
+        panels.forEach(panel => {
+            panel.addEventListener("click", () =>{
+
+                removeActive();
+                panel.classList.add("active");
+            });
+        })
+
+        function removeActive(){
+            panels.forEach(panel => {
+                panel.classList.remove("active");
+            })
+        }
+    </script>
+
+    <script></script>
+</body>
+</html>
